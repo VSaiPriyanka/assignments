@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">My Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="showPage('about')">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="showPage('blog')">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="home" class="page">
+  <div class="container">
+    <div class="jumbotron mt-3">
+      <h1>Welcome to My Blog</h1>
+      <p>This is a simple blog created using HTML, CSS, JavaScript, and Bootstrap.</p>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="page" style="display: none;">
+  <div class="container">
+    <h2>About</h2>
+    <p>This is the About page. You can provide information about yourself or your blog here.</p>
+  </div>
+</div>
+
+<div id="blog" class="page" style="display: none;">
+  <div class="container">
+    <h2>Blog</h2>
+    <!-- Blog Posts -->
+    <div id="blog-posts">
+      <!-- Blog post items will be dynamically added here using JavaScript -->
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="page" style="display: none;">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>You can contact us via email or through the contact form below:</p>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function showPage(pageId) {
+    var pages = document.getElementsByClassName('page');
+    for (var i = 0; i < pages.length; i++) {
+      if (pages[i].id === pageId) {
+        pages[i].style.display = 'block';
+      } else {
+        pages[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
