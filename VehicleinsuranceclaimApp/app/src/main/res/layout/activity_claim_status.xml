@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewClaimStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Claim Status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/buttonShowClaimStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Status"
+        android:layout_below="@id/textViewClaimStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewClaimStatusInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your claim status: Pending"
+        android:layout_below="@id/buttonShowClaimStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
